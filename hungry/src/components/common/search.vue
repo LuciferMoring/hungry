@@ -1,0 +1,48 @@
+<template>
+	<div class="search">
+		<div class="sear">
+			<span class="iconfont">&#xe621;</span>
+			<input type="text" placeholder="搜索饿了么商家,商品名称">
+		</div>
+	</div>
+</template>
+<script>
+	export default{
+		
+	}
+</script>
+<style scoped>
+	.search {
+		position: absolute;
+		top:40px;
+		left:0;
+		height:40px;
+		width: 100%;
+		background:#008cff;
+		z-index: 1;
+		line-height: 40px;
+	}
+	.search .sear {
+		position: relative;
+		height:40px;
+		width:296px;
+		
+		margin: 0 auto;
+	}
+	.search .sear input {
+		width:100%;
+		height:30px;
+		line-height: 30px;
+		text-align: center;
+		
+		border:none;
+		outline: none;
+	}
+	.search .sear span {
+		position: absolute;
+		top:50%;
+		left:50px;
+		transform: translateY(-50%);
+		font-size: 14px;
+	}
+</style>

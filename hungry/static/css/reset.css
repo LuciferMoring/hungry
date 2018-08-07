@@ -1,0 +1,32 @@
+html,body,ul,li,dl,dt,dd,p,h1,h2,h3,h4,h5,h6,form,input,tr,td,img {
+	margin:0;
+	padding:0;
+}
+ul li,ol li {
+	list-style:none;
+}
+img {
+	display:block;
+}
+div img {
+	border:none;
+}
+a {
+	text-decoration:none;
+}
+i,em {
+	font-style:normal;
+}
+h1,h2,h3,h4,h5,h6,strong,b {
+	font-weight:normal;
+}
+.clearfix:after {
+	content:"";
+	clear:both;
+	font-size:0;
+	height: 0;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	
+}
