@@ -29,9 +29,7 @@
 		width:100%;
 		height:150px;
 		background:red;
-		position: absolute;
-		top:80px;
-		left:0;
+		padding-top: 80px;
 		
 	}
 </style>
