@@ -20,6 +20,7 @@
 		padding-left: 10px;
 		color:#fff;
 		background:#008cff;
+		z-index: 9;
 	}
 	.posi {
 		font-size:18px;

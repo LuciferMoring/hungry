@@ -1,17 +1,17 @@
 <template>
-	<div class="condition_wrap" :class="{active:flag==true}">
+	<div class="condition_wrap" >
 		<div class="condition" >
 			<div class="condition_top">
 				<p class="zonghe" :class="{c_active:tcolor==true}"  @click="show()">
 					综合排序▼
 				</p>
-				<p class="other" v-for="item in conditionArr2">{{item.name}}</p>
+				<p class="other" v-for="(item,index) in conditionArr2" :key='index'>{{item.name}}</p>
 				<p class="choice">筛选</p>
 			</div>
 		</div>
 		<p class="con_nav" v-show='isShow'  @click="hidden()">
 			<ul >
-				<li v-for="item in conditionArr">{{item.name}}</li>
+				<li v-for="(item, i) in conditionArr" :key='i'>{{item.name}}</li>
 			</ul>
 		</p>
 	
@@ -42,7 +42,6 @@
 		methods:{
 			show:function(){
 				this.isShow = true;
-				this.flag = true;
 				this.tcolor = true;
 			},
 			hidden(){

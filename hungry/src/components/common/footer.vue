@@ -1,7 +1,7 @@
 <template>
 	<div class="footer">
 		<ul class="nav">
-			<li v-for="(item, index) in navList"  @click="choice(item.id)" :class="{active:select==item.id}">
+			<li v-for="(item,index) in navList"  @click="choice(item.id)" :class="{active:select==item.id}" :key='index'>
 				<span class="iconfont" :class=item.class></span>
 				<router-link :to=item.path>
 					{{item.title}}

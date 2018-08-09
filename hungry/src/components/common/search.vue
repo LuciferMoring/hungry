@@ -22,7 +22,7 @@
 		height:40px;
 		width: 100%;
 		background:#008cff;
-		z-index: 1;
+		z-index: 9;
 		line-height: 40px;
 	}
 	.search .sear {

@@ -9,10 +9,8 @@
 	export default {
 		mounted(){
 			//创建滚动式图
-			let scroll = new IScroll(this.$refs.page,{
-				probeType:3
-			});
-			scroll.on('beforeScrollStart',()=>{
+			let scroll = new IScroll(this.$refs.page,{probeType:3});
+			scroll.on('beforeScrollStart', ()=>{
 				scroll.refresh();
 			})
 		}
