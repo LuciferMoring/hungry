@@ -25,7 +25,7 @@
 	.search .sear {
 		position: relative;
 		height:40px;
-		width:296px;
+		width:350px;
 		
 		margin: 0 auto;
 	}
