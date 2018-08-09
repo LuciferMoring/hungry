@@ -1,5 +1,13 @@
 //接口页面
-const BANNER_DATA = '/restapi/shopping/openapi/entries'
+
+//banner数据接口
+const BANNER_DATA = '/restapi/shopping/openapi/entries?latitude=22.547&longitude=114.085947&templates[]=main_template&templates[]=favourable_template&templates[]=svip_template&terminal=h5'
+const CONDITION = '/restapi/shopping/v1/restaurants/outside_filter/attributes?latitude=22.547&longitude=114.085947&terminal=h5'
+
+
+
+
+
 
 
 
@@ -12,5 +20,9 @@ const SHOPPING_RESTAURANTS_DATA ='/restapi/shopping/v3/restaurants?latitude=22.5
 
 export default {
 	BANNER_DATA,
+<<<<<<< HEAD
 	SHOPPING_RESTAURANTS_DATA
+=======
+	CONDITION
+>>>>>>> 0eaf86f1ec08a474f45f4905b9fc1bfb471339a8
 }
