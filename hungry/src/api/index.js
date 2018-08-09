@@ -20,9 +20,6 @@ const SHOPPING_RESTAURANTS_DATA ='/restapi/shopping/v3/restaurants?latitude=22.5
 
 export default {
 	BANNER_DATA,
-<<<<<<< HEAD
-	SHOPPING_RESTAURANTS_DATA
-=======
+	SHOPPING_RESTAURANTS_DATA,
 	CONDITION
->>>>>>> 0eaf86f1ec08a474f45f4905b9fc1bfb471339a8
 }

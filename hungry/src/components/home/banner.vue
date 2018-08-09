@@ -2,7 +2,7 @@
 		<div class="swiper-container" ref='banner'>
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-						<p v-for="item in bannerList1">
+						<p v-for="(item,index) in bannerList1" :key='index'>
 							<router-link to="">
 								<img :src=item.src>
 								{{item.name}}
@@ -11,7 +11,7 @@
 						</p>
 				</div>
 				<div class="swiper-slide">
-						<p v-for="item in bannerList2">
+						<p v-for="(item, i) in bannerList2" :key="i">
 							<router-link to="">
 								<img :src=item.src>
 								{{item.name}}
@@ -63,15 +63,9 @@
 <style scoped> 
 	.swiper-container {
 		width:100%;
-<<<<<<< HEAD
 		height:150px;
-		background:red;
-		padding-top: 80px;
-		
-=======
+		padding-top: 80px;		
 		height:200px;
-		/* background:red; */
-		padding-top:80px;
 		}
 	.swiper-slide {
 		display: flex;	
@@ -82,8 +76,7 @@
 	.swiper-slide p {
 		flex:20%;
 		font-size:12px;
-		text-align: center;
-	
+		text-align: center;	
 	}
 	.swiper-container p a {
 		color:#000;
@@ -95,6 +88,5 @@
 		height:45px;
 		padding-left:10px;
 
->>>>>>> 0eaf86f1ec08a474f45f4905b9fc1bfb471339a8
 	}
 </style>

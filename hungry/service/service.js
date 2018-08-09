@@ -59,10 +59,30 @@ export function getConditionData(){
 			console.log(error)
 		})	
 	})
-<<<<<<< HEAD
-	
-
+	return p3;
 }
+
+
+export function getConditionData2(){
+	let p4 = new Promise((resolve,reject)=>{
+		Axios.get(API.CONDITION)
+		.then(response=>{
+			let conditionData2 = response.data.outside_sort_filter.map(item=>{
+				return {
+					name:item.name
+				}	
+			})
+			
+			resolve(conditionData2);
+		})
+		.catch(error=>{
+			console.log(error)
+		})	
+	})
+	return p4;
+}
+
+
 
 //请求商家详情数据
 export function getRestaurants(){
@@ -118,25 +138,4 @@ export function getRestaurants(){
 	})
 }
 
-=======
-	return p3;
-}
-export function getConditionData2(){
-	let p4 = new Promise((resolve,reject)=>{
-		Axios.get(API.CONDITION)
-		.then(response=>{
-			let conditionData2 = response.data.outside_sort_filter.map(item=>{
-				return {
-					name:item.name
-				}	
-			})
-			
-			resolve(conditionData2);
-		})
-		.catch(error=>{
-			console.log(error)
-		})	
-	})
-	return p4;
-}
->>>>>>> 0eaf86f1ec08a474f45f4905b9fc1bfb471339a8
+
