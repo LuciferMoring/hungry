@@ -1,8 +1,11 @@
 <template>
 	<div class="search">
 		<div class="sear">
+			<router-link to=''>
+				
 			<span class="iconfont">&#xe621;</span>
 			<input type="text" placeholder="搜索饿了么商家,商品名称">
+			</router-link>
 		</div>
 	</div>
 </template>
