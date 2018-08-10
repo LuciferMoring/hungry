@@ -193,15 +193,15 @@ i{
     padding: 0;
     background: #eee;
     width: 60px;
-    height: 11px;
+    height: 10px;
     overflow: hidden;
     position: relative;
 }
 .star{
-    line-height: 12px;
+    line-height: 14px;
     color: #fff;
     position: absolute;
-    top :0;
+    top :-2px;
     left: 0;
 }
 .star_y{
@@ -209,7 +209,6 @@ i{
     top :0;
     left: 0;
     display: inline-block;
-    line-height: 12px;
     height: 100%;
     background: #ffe601;
 }
