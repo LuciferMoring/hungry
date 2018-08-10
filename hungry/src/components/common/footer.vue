@@ -17,7 +17,7 @@
 			return {
 				select:1,
 				navList:[
-					{title:'首页',path:'/home',class:'icon-shouye',id:"1"},
+					{title:'首页',path:'/home',class:'icon-shouye-',id:"1"},
 					{title:'发现',path:'/discover',class:'icon-faxian',id:"2"},
 					{title:'订单',path:'/order',class:'icon-icondd1',id:"3"},
 					{title:'我的',path:'/mine',class:'icon-profile',id:"4"}
