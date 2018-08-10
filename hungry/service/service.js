@@ -115,6 +115,10 @@ export function getRestaurants(){
 				}else{
 					op='.png';
 				}
+
+				//活动数量
+				
+				
 				
 				return{
 					name: item.restaurant.name,
@@ -123,10 +127,15 @@ export function getRestaurants(){
 					float_delivery_fee: item.restaurant.float_delivery_fee,
 					support_tags:item.restaurant.support_tags,
 					distance:tance,
-					activities:item.restaurant.activities,
+					activities_1:item.restaurant.activities.slice(0,2),
+					activities_2:item.restaurant.activities.slice(2,item.restaurant.activities.length),
 					image_path:'//fuss10.elemecdn.com/'+item.restaurant.image_path+op+'?imageMogr/format/webp/thumbnail/!64x64r/gravity/Center/crop/64x64/',
 					mode:mode,
-					order_lead_time:item.restaurant.order_lead_time
+					order_lead_time:item.restaurant.order_lead_time,
+					supports:item.restaurant.supports,
+					num:item.restaurant.activities.length,
+					recommend:item.restaurant.recommend,
+					rating:item.restaurant.rating
 				}
 				
 			})
