@@ -1,5 +1,5 @@
 <template>
-	<div class="search" :class="classVal">
+	<div class="search" >
 		<div class="sear">
 			<router-link to='./search'>
 				<span class="iconfont">&#xe621;</span>
@@ -17,14 +17,14 @@
 		},
 		created(){
 			
-		},
-		mounted(){
-			this.$center.$on('sendY',(res)=>{
-					if(res<=-40){
-				this.classVal='active'
-				}
-			})
 		}
+		// mounted(){
+		// 	this.$center.$on('sendY',(res)=>{
+		// 			if(res<=-40){
+		// 		this.classVal='active'
+		// 		}
+		// 	})
+		// }
 	}
 </script>
 <style scoped>
@@ -61,11 +61,11 @@
 		transform: translateY(-50%);
 		font-size: 14px;
 	}
-	.active {
+	/* .active {
 		background: red;
 		position: fixed;
 		top:0px;
 		left:0;
 		z-index: 2;
-	}
+	} */
 </style>

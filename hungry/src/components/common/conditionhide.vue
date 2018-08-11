@@ -52,7 +52,7 @@
 			})
 		},
 		methods:{
-			show:function(){
+			show(){
 				this.isShow = true;
 				this.tcolor = true;
 			},

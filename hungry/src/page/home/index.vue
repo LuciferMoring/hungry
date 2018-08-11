@@ -1,7 +1,8 @@
 
 <template>
 	<div class="home" >
-		<Conditionhide></Conditionhide>
+		
+		<!-- <Conditionhide></Conditionhide> -->
 		<iscrollp class="home" :onscroll="gundong" ref="page">
 			<Header></Header>
 			<Search></Search>
@@ -30,7 +31,7 @@
 	import Store from '../../components/common/store.vue'
 	import {getRestaurants} from '../../../service/service.js'
 	import Footer from '../../components/common/footer.vue'
-	import Conditionhide from '../../components/common/conditionhide.vue'
+	// import Conditionhide from '../../components/common/conditionhide.vue'
 	export default {
 		components:{
 			Header,
@@ -39,7 +40,7 @@
 			Taocan,
 			Condition,
 			Footer,
-			Conditionhide,		
+			// Conditionhide,		
 			Store
 		},
 		 data(){
@@ -75,6 +76,9 @@
 	}
 </script>
 <style scoped>
+ul{
+	margin-top: 36px;
+}
 li{
     border-bottom:1px solid #eee;
 }	

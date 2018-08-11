@@ -6,8 +6,8 @@
 	</div>
 </template>
 <script>
-	import Vue from 'vue'
-	Vue.prototype.$center = new Vue()
+	// import Vue from 'vue'
+	// Vue.prototype.$center = new Vue()
 	export default {
 		props:{
 			onscroll:Function
@@ -18,12 +18,17 @@
 			}
 			
 		},
+		data(){
+			return{
+				datay:0
+			}
+		},
 		mounted(){
 			//创建滚动式图
 			let scroll = new IScroll(this.$refs.page,{
 				probeType: this.onscroll?3:0,
 				scrollbars: true,
-				fadeScrollbars:true
+				fadeScrollbars:true,
 			});
 			this.scroll = scroll;
 
@@ -34,7 +39,13 @@
 			scroll.on('scroll',()=>{
 				let disY=scroll.y-scroll.maxScrollY;
 				this.onscroll(disY);
-				Vue.prototype.$center.$emit('sendY',scroll.y)
+				this.$center.$emit('sendY',scroll.y)
+				// Vue.prototype.$center.$emit('sendY',scroll.y)				
+			})
+
+			this.$center.$on('clickcon',(y)=>{
+				scroll.scrollTo(0,-y)
+				
 			})
 		}
 	}
