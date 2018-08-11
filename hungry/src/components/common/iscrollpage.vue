@@ -8,11 +8,15 @@
 <script>
 	export default {
 		props:{
-			onscroll:Function
+			onscroll:Function,
+			clickcond:Function
 		},
 		methods: {
 			refreshDOM(){
 				this.scroll.refresh();
+			},
+			movescroll(){
+				scroll.y=500
 			}
 		},
 		mounted(){
