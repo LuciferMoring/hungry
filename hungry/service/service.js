@@ -85,11 +85,11 @@ export function getConditionData2(){
 
 
 //请求商家详情数据
-export function getRestaurants(){
+export function getRestaurants(n){
 	return new Promise((resolve,reject)=>{
 		Axios.get(API.SHOPPING_RESTAURANTS_DATA,{
 			params: {
-				offset:0
+				offset:n
 			}
 		})
 		.then(response=>{
@@ -115,11 +115,7 @@ export function getRestaurants(){
 				}else{
 					op='.png';
 				}
-
-				//活动数量
-				
-				
-				
+								
 				return{
 					name: item.restaurant.name,
 					recent_order_num: item.restaurant.recent_order_num,

@@ -7,11 +7,30 @@
 </template>
 <script>
 	export default {
+		props:{
+			onscroll:Function
+		},
+		methods: {
+			refreshDOM(){
+				this.scroll.refresh();
+			}
+		},
 		mounted(){
 			//创建滚动式图
-			let scroll = new IScroll(this.$refs.page,{probeType:3});
+			let scroll = new IScroll(this.$refs.page,{
+				probeType: this.onscroll?3:0,
+				scrollbars: true,
+				fadeScrollbars:true
+			});
+			this.scroll = scroll;
+
 			scroll.on('beforeScrollStart', ()=>{
 				scroll.refresh();
+			})
+			
+			scroll.on('scroll',()=>{
+				let disY=scroll.y-scroll.maxScrollY;
+				this.onscroll(disY)
 			})
 		}
 	}
