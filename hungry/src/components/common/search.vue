@@ -20,7 +20,6 @@
 		},
 		mounted(){
 			this.$center.$on('sendY',(res)=>{
-				console.log(res)
 					if(res<=-40){
 				this.classVal='active'
 				}

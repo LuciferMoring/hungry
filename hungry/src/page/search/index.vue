@@ -3,7 +3,7 @@
 		<div class="header">
 				<span>
 					<router-link to="/home">
-						<			
+									
 					</router-link>
 				</span>
 			<div class="sear">
@@ -14,7 +14,7 @@
 		</div>
 		<h1>热门搜索</h1>
 		<ul class="hotword">
-			<li v-for="item in hotList">{{item.name}}</li>
+			<li v-for="( item , index ) in hotList" :key="index" >{{item.name}}</li>
 		</ul>
 	</div>
 </template>

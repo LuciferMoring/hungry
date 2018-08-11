@@ -9,18 +9,14 @@
 	import Vue from 'vue'
 	Vue.prototype.$center = new Vue()
 	export default {
-<<<<<<< HEAD
 		props:{
-			onscroll:Function,
-			clickcond:Function
+			onscroll:Function
 		},
 		methods: {
 			refreshDOM(){
 				this.scroll.refresh();
-			},
-			movescroll(){
-				scroll.y=500
 			}
+			
 		},
 		mounted(){
 			//创建滚动式图
@@ -37,20 +33,9 @@
 			
 			scroll.on('scroll',()=>{
 				let disY=scroll.y-scroll.maxScrollY;
-				this.onscroll(disY)
+				this.onscroll(disY);
+				Vue.prototype.$center.$emit('sendY',scroll.y)
 			})
-=======
-		
-		mounted(){
-			//创建滚动式图
-			 scroll = new IScroll(this.$refs.page,{probeType:3});
-			 scroll.on('beforeScrollStart', ()=>{
-				scroll.refresh();
-			})
-			scroll.on('scroll',function(){
-				Vue.prototype.$center.$emit('sendY',scroll.y) 
-			})	
->>>>>>> 079abb151693d38bf86001e0e94495ed528e43e6
 		}
 	}
 </script>
