@@ -2,11 +2,11 @@
 		<div class="swiper-container" ref='banner'>
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
-						<p v-for="(item,index) in bannerList1" :key='index'>
-							<router-link to="">
+						<p v-for="(item,index) in bannerList1">
+							<a @click="gopage(index)"><!--用编程式导航跳转页面-->
 								<img :src=item.src>
 								{{item.name}}
-							</router-link>
+							</a>
 	
 						</p>
 				</div>
@@ -35,6 +35,15 @@
 				src:'',
 				bannerList1:[],
 				bannerList2:[]
+			}
+		},
+		methods:{
+			gopage(index){
+				if(index==0){
+					this.$router.push({path:'food',name:'food',params:{id:index}})
+				}else if(index==1){
+					this.$router.push({path:'dinner',name:'dinner',params:{id:index}})
+				}
 			}
 		},
 		mounted(){

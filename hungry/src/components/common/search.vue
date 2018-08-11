@@ -1,14 +1,31 @@
 <template>
-	<div class="search">
+	<div class="search" :class="classVal">
 		<div class="sear">
-			<span class="iconfont">&#xe621;</span>
-			<input type="text" placeholder="搜索饿了么商家,商品名称">
-		</div>
+			<router-link to='./search'>
+				<span class="iconfont">&#xe621;</span>
+				<input type="text" placeholder="搜索饿了么商家,商品名称">
+			</router-link>
+		</div>	
 	</div>
 </template>
 <script>
 	export default{
-		
+		data(){
+			return {
+				classVal:''
+			}
+		},
+		created(){
+			
+		},
+		mounted(){
+			this.$center.$on('sendY',(res)=>{
+				console.log(res)
+					if(res<=-40){
+				this.classVal='active'
+				}
+			})
+		}
 	}
 </script>
 <style scoped>
@@ -44,5 +61,12 @@
 		left:50px;
 		transform: translateY(-50%);
 		font-size: 14px;
+	}
+	.active {
+		background: red;
+		position: fixed;
+		top:0px;
+		left:0;
+		z-index: 2;
 	}
 </style>

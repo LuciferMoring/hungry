@@ -9,6 +9,7 @@ export function getBannerData1(){
 			let data = response.data[0].entries.slice(0,10).map(item=>{
 				return {
 					name:item.name,
+					link:'/msite/food/#' + item.link,
 					//图片url拼接
 					src:'//fuss10.elemecdn.com/' + item.image_hash +'.jpeg?imageMogr/format/webp/thumbnail/!90x90r/gravity/Center/crop/90x90/'
 				}
@@ -81,8 +82,25 @@ export function getConditionData2(){
 	})
 	return p4;
 }
-
-
+//请求热门搜索数据
+export function getHotData(){
+	let p5 = new Promise((resolve,reject)=>{
+			Axios.get(API.HOT)
+			
+			.then(response=>{
+				let hotData = response.data.map(item=>{
+					return {
+						name:item.word
+					}
+				})
+				resolve(hotData)
+			})
+			.catch(error=>{
+				console.log('失败')
+			})
+	})
+	return p5
+}
 
 //请求商家详情数据
 export function getRestaurants(n){

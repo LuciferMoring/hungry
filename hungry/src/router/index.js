@@ -5,7 +5,9 @@ import Home from '../page/home/index.vue'
 import Discover from '../page/discover/index.vue'
 import Mine from '../page/mine/index.vue'
 import Order from '../page/order/index.vue'
-
+import Search from '../page/search/index.vue'
+import Food from '../page/food/index.vue'
+import Dinner from '../page/dinner/index.vue'
 export default new Router({
   routes: [
     {
@@ -13,6 +15,11 @@ export default new Router({
 		alias:'/',
 		name:'home',
 		component:Home
+	},
+	{
+		path:'/search',
+		name:'search',
+		component:Search
 	},
 	{
 		path:'/discover',
@@ -28,6 +35,16 @@ export default new Router({
 		path:'/mine',
 		name:'mine',
 		component:Mine
+	},
+	{
+		path:'/food/id=0',
+		name:'food',
+		component:Food
+	},
+	{
+		path:'/dinner/id=1',
+		name:'dinner',
+		component:Dinner
 	}
   ]
 })
