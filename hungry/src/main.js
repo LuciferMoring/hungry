@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+Vue.prototype.$center = new Vue()
 import iscrollpage from './components/common/iscrollpage.vue'
 Vue.component('iscrollp',iscrollpage)
 

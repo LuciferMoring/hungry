@@ -6,13 +6,19 @@
 	</div>
 </template>
 <script>
+	import Vue from 'vue'
+	Vue.prototype.$center = new Vue()
 	export default {
+		
 		mounted(){
 			//创建滚动式图
-			let scroll = new IScroll(this.$refs.page,{probeType:3});
-			scroll.on('beforeScrollStart', ()=>{
+			 scroll = new IScroll(this.$refs.page,{probeType:3});
+			 scroll.on('beforeScrollStart', ()=>{
 				scroll.refresh();
 			})
+			scroll.on('scroll',function(){
+				Vue.prototype.$center.$emit('sendY',scroll.y) 
+			})	
 		}
 	}
 </script>
